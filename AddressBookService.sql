@@ -53,3 +53,6 @@ update AddressBookTable set bookType='Family' where personId=1 or personId=3
 update AddressBookTable set bookType='Friend' where personId=4 
 update AddressBookTable set bookType='Profession' where personId=5
 
+--UC10 Calculating the size of the record based on type
+
+select count(phoneNumber)as NoOfContact,bookType from AddressBookTable group by bookType
