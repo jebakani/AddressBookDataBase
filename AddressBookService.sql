@@ -22,3 +22,5 @@ insert into AddressBookTable values
 
 select * from AddressBookTable
 
+--UC4 Edit contact in table 
+update AddressBookTable set email='marcus47@gmail.com' where firstName='Marcus' and lastName='Antony'
