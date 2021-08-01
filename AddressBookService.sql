@@ -20,6 +20,10 @@ insert into AddressBookTable values
 ('Marcus','Antony','MGR Nagar','Coimbatore','Tamil Nadu',689542,9875621552,'marcus23@gmail.com'),
 ('Stephan','Kingley','Ymg Nagar','Kottaiyam','Kerala',869456,8654973250,'kingleyS@gmail.com')
 
+insert into AddressBookTable values
+('stuart','Little','xygm','chennai','Tamil Nadu',568945,8654236549,'little@gmail.com'),
+('harry','potter','jkalas','madurai','Tamil Nadu',625489,8796542356,'potter@gmail.com')
+
 select * from AddressBookTable
 
 --UC4 Edit contact in table 
@@ -33,3 +37,8 @@ delete from AddressBookTable where firstName='Marcus' and lastName='Antony'
 select * from AddressBookTable where state='Tamil Nadu' or city='chennai'
 
 select * from AddressBookTable where state = 'Kerala'
+
+--UC7 Calculating the size of the record by state or city
+
+select count(phoneNumber)as NoOfContact,state from AddressBookTable group by state
+select count(phoneNumber) as NoOfContact,city from AddressBookTable group by city
