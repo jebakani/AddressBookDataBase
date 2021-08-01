@@ -46,3 +46,10 @@ select count(phoneNumber) as NoOfContact,city from AddressBookTable group by cit
 --UC8 Retrive Record Base on city sorted order
 select * from AddressBookTable where city='chennai' order by(lastName)
 select * from AddressBookTable where state='Tamil Nadu' order by(firstName)
+
+--UC9-Adding type of the contact
+alter table addressBookTable add bookType varchar(200)
+update AddressBookTable set bookType='Family' where personId=1 or personId=3
+update AddressBookTable set bookType='Friend' where personId=4 
+update AddressBookTable set bookType='Profession' where personId=5
+
