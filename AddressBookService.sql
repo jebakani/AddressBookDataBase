@@ -28,3 +28,8 @@ update AddressBookTable set email='marcus47@gmail.com' where firstName='Marcus' 
 --UC5 Delete the record from table
 delete from AddressBookTable where firstName='Marcus' and lastName='Antony' 
 
+--UC6 Retriving record based on City or state
+
+select * from AddressBookTable where state='Tamil Nadu' or city='chennai'
+
+select * from AddressBookTable where state = 'Kerala'
