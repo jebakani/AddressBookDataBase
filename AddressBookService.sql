@@ -56,3 +56,6 @@ update AddressBookTable set bookType='Profession' where personId=5
 --UC10 Calculating the size of the record based on type
 
 select count(phoneNumber)as NoOfContact,bookType from AddressBookTable group by bookType
+
+--UC11 Adding contact in Two type
+insert into AddressBookTable values ('Jessi','Arul','K.K.Nagar','Chennai','Tamil Nadu',600007,8642536784,'jessiA@gmail.com','Friend')
